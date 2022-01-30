@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+    <h1>Редагування: {{form.id}}</h1>
+    <p><p/>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+        {{ editedform }}
+        </table>
+        <input type="submit" value="Змінити" />
+    </form>
+
+{% endblock %}

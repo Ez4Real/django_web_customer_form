@@ -1,0 +1,47 @@
+{% extends "base_generic.html" %}
+{% comment %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/stylesheet.css' %}"> {% endcomment %}
+{% block content %}
+    <h1>Список замовлень</h1>
+
+    
+      <table border='2' cellpadding="2" width='auto' height='auto' class='table'>
+        <thead>
+          <tr>
+            <th>Пристрій</th>
+            <th>Причина</th>
+            <th>Клієнт</th>
+            <th>Ціна замовлення</th>
+            <th>Контакт</th>
+            <th>Майстер</th>
+            <th>Відкрито</th>
+            <th>Закрито</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% if form_list %}
+          {% for form in form_list %}
+          <tr>
+            <td><a href="">{{form.type}} {{form.manufacture}} {{form.model}}</a></td>
+            <td>{{form.reason}}</td>
+            <td>{{ form.last_name }} {{form.first_name}}</td>
+            <td>{{form.price}}</td>
+            <td>{{form.phone}}</td>
+            <td>{{form.took_the_orded}}</td>
+            <td>{{form.open_orded}}</td>
+            <td>{{form.done_order}}</td>
+            <td><a href="{% url 'form-detail' form.id %}">Детальніше</a></td>
+            <td><a href="{% url 'edit-form' form.id %}">Редагувати</a></td>
+            <td><a href="{% url 'form-print' form.id %}">Друк</a></td>
+            <td><a href="{% url 'form-delete' form.id %}">Видалити</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+
+    {% else %}
+      <p>В вашем списке пока нет форм!</p>
+    {% endif %} 
+{% endblock %}

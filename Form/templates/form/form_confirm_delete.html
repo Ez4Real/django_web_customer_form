@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Видалити форму</h1>
+
+<p>Ви впевнені що хочете видалити цю форму? {{ form }}</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Так, видалити." />
+</form>
+
+{% endblock %}

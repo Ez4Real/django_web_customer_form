@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h2>Динамічний контент</h2>
+
+  <ul>
+    <li><strong>Кількість замовлень:</strong> {{ num_forms }}</li>
+    <li><strong>Замовлень які підлягають ремонту:</strong> {{ num_forms_repairable }}</li>
+    <li><strong>Замовлень з дивайсом "Asus":</strong> {{ num_asus }}</li>
+  </ul>
+
+{% endblock %}
+
+{% block title %}
+<title>Менеджмент замовлень</title>
+{% endblock %}

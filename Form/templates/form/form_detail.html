@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    {% comment %} {% block title %}<title>Локальная база заказов</title>{% endblock %} {% endcomment %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+{% block content %}
+
+  <p><strong>№ Замовлення: </strong>{{ form.id }}</p>
+  <p><strong>Пристрій:</strong> {{ form.type }} {{form.manufacture}} {{form.model}}</p>
+  <p><strong>Причина поломки:</strong> {{ form.reason }}</p>
+  <p><strong>Замовник: </strong>{{ form.last_name }} {{ form.first_name}}</a></p>
+  <p><strong>Ціна:</strong> {{ form.price }}</p>
+  <p><strong>Контакт клієнта:</strong> {{ form.phone }}</p>
+  <p><strong>Відкрито:</strong> {{ form.open_orded }}</p>
+  <p><strong>Закрито:</strong> {{ form.done_order }}</p>
+  <p><strong>Серійний номер продукта:</strong> {{ form.serial_number }}</p>
+  <p><strong>Пароль доступу до пристрою:</strong> {{ form.password }}</p>
+  {% if form.is_notified == 'YES' %}
+  <p><strong>Повідомлений клієнт: </strong> Так</p>
+  {% else %}
+  <p><strong>Повідомлений клієнт: </strong> Ні</p>
+  {% endif %}
+  <p><strong>Комплектація:</strong> {{ form.equipment }}</p>
+  <body>
+
+    
+  
+{% endblock %}
+
+</body>
+</html>
