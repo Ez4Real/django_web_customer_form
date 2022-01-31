@@ -1,14 +1,17 @@
 # Install pip first
-sudo apt-get install python3-pip
+python get-pip.py
 
 # Then install virtualenv using pip3
-sudo pip3 install virtualenv 
+pip3 install virtualenvwrapper-win
 
 # Now create a virtual environment
 virtualenv venv 
 
 # VENV Activate
 .\env\Scripts\activate.bat
+
+Install requirements
+pip install -r /path/to/requirements.txt
 
 # Run project
 manage.py runserver
