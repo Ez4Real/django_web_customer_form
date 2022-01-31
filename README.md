@@ -1,6 +1,3 @@
-# django_web_customer_form
-Batya's request
-
 # Install pip first
 sudo apt-get install python3-pip
 
