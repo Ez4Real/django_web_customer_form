@@ -80,8 +80,8 @@ def edit_form(request, pk):
             form.is_repairable = edited_form.cleaned_data['is_repairable']
             form.price = edited_form.cleaned_data['price']
             form.is_notified = edited_form.cleaned_data['is_notified']
-            form.took_the_orded = edited_form.cleaned_data['took_the_orded']
-            # form.open_orded = edited_form.cleaned_data['open_orded']
+            form.took_the_order = edited_form.cleaned_data['took_the_order']
+            # form.open_orded = edited_form.cleaned_data['open_order']
             form.done_order = edited_form.cleaned_data['done_order']
             form.equipment = edited_form.cleaned_data['equipment']
             form.save()
@@ -99,8 +99,8 @@ def edit_form(request, pk):
                                         'reason': form.reason,
                                         'price': form.price,
                                         'is_notified': form.is_notified,
-                                        'took_the_orded': form.took_the_orded,
-                                        # 'open_orded': form.open_orded,
+                                        'took_the_order': form.took_the_order,
+                                        # 'open_order': form.open_order,
                                         'done_order': form.done_order,
                                         'equipment': form.equipment,
                                         })

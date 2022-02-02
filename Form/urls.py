@@ -8,10 +8,10 @@ urlpatterns = [
     
     path('', views.index, name='index'),
     path('forms/', views.FormListView.as_view(), name='forms'),
-    path('form/(<uuid:pk>)/details', views.FormDetailView.as_view(), name='form-detail'),
-    path('form/(<uuid:pk>)/update', views.edit_form, name='edit-form'),
-    path('form/(<uuid:pk>)/printing', views.printing_form, name='form-print'),   
+    path('form/<int:pk>/details', views.FormDetailView.as_view(), name='form-detail'),
+    path('form/<int:pk>/update', views.edit_form, name='edit-form'),
+    path('form/<int:pk>/printing', views.printing_form, name='form-print'),   
     path('form/create/', views.FormCreate.as_view(), name='form-create'),
-    path('form/<uuid:pk>/delete/', views.FormDelete.as_view(), name='form-delete'),
+    path('form/<int:pk>/delete/', views.FormDelete.as_view(), name='form-delete'),
 
 ]

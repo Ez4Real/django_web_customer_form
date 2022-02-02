@@ -5,7 +5,7 @@
     <h1>Список замовлень</h1>
 
     
-      <table border='2' cellpadding="2" width='auto' height='auto' class='table'>
+      <table class='table'>
         <thead>
           <tr>
             <th>Пристрій</th>
@@ -25,13 +25,13 @@
           <tr>
             <td><a href="">{{form.type}} {{form.manufacture}} {{form.model}}</a></td>
             <td>{{form.reason}}</td>
-            <td>{{ form.last_name }} {{form.first_name}}</td>
+            <td>{{form.last_name}} {{form.first_name}}</td>
             <td>{{form.price}}</td>
             <td>{{form.phone}}</td>
             <td>{{form.took_the_orded}}</td>
-            <td>{{form.open_orded}}</td>
+            <td>{{form.open_order}}</td>
             <td>{{form.done_order}}</td>
-            <td><a href="{% url 'form-detail' form.id %}">Детальніше</a></td>
+            <td><a href="{{ form.get_absolute_url }}">Детальніше</a></td>
             <td><a href="{% url 'edit-form' form.id %}">Редагувати</a></td>
             <td><a href="{% url 'form-print' form.id %}">Друк</a></td>
             <td><a href="{% url 'form-delete' form.id %}">Видалити</a></td>

@@ -41,7 +41,7 @@ class EditForm(forms.Form):
                                decimal_places=2,
                                label='Ціна замовлення')
     
-    took_the_orded = forms.ModelChoiceField(queryset=Master.objects.all(),
+    took_the_order = forms.ModelChoiceField(queryset=Master.objects.all(),
                                             label = 'Приймав замовлення',
                                             initial= '')
     

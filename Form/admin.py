@@ -32,8 +32,8 @@ class FormAdmin(admin.ModelAdmin):
                       'price',
                       'password',
                       'serial_number',
-                      'took_the_orded',
-                      'open_orded',
+                      'took_the_order',
+                      'open_order',
                       'done_order')
     
     fields = [('last_name', 'first_name'),
@@ -43,8 +43,8 @@ class FormAdmin(admin.ModelAdmin):
                       'price',
                       'password',
                       'serial_number',
-                      'took_the_orded',
-                      ('open_orded', 'done_order')]
+                      'took_the_order',
+                      ('open_order', 'done_order')]
     
-    list_filter = ('manufacture', 'type', 'open_orded', 'took_the_orded')
+    list_filter = ('manufacture', 'type', 'open_order', 'took_the_order')
     
