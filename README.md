@@ -1,17 +1,10 @@
-# Install pip first
-python get-pip.py
-
-# Then install virtualenv using pip3
-pip3 install virtualenvwrapper-win
-
-# Now create a virtual environment
-virtualenv venv 
-
-# VENV Activate
-.\env\Scripts\activate.bat
-
-Install requirements
-pip install -r /path/to/requirements.txt
-
-# Run project
-manage.py runserver
+asgiref==3.4.1
+Babel==2.9.1
+Django==4.0
+django-money==2.1
+django-phonenumber-field==6.0.0
+phonenumbers==8.12.40
+py-moneyed==1.2
+pytz==2021.3
+sqlparse==0.4.2
+tzdata==2021.5

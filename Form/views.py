@@ -81,7 +81,7 @@ def edit_form(request, pk):
             form.price = edited_form.cleaned_data['price']
             form.is_notified = edited_form.cleaned_data['is_notified']
             form.took_the_order = edited_form.cleaned_data['took_the_order']
-            # form.open_orded = edited_form.cleaned_data['open_order']
+            # form.open_order = edited_form.cleaned_data['open_order']
             form.done_order = edited_form.cleaned_data['done_order']
             form.equipment = edited_form.cleaned_data['equipment']
             form.save()

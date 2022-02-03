@@ -1,5 +1,4 @@
 from django.db import models
-import uuid
 from phonenumber_field.modelfields import PhoneNumberField
 from django.urls import reverse
 import datetime
@@ -52,7 +51,7 @@ class Form(models.Model):
                                  help_text="Введіть фамілію клієнта",
                                  blank=True) 
     
-    phone = PhoneNumberField(null=False, blank=False, unique=True, help_text="Введіть номер телефону клієнта")
+    phone = PhoneNumberField(null=False, blank=False, help_text="Введіть номер телефону клієнта")
     
     type = models.ForeignKey(Device, on_delete=models.SET_NULL,
                                      help_text="Тип девайсу",

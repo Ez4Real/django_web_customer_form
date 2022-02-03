@@ -1,6 +1,7 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
 from .models import Device, Manufacture, Master, Form
+import datetime
 
 
 class EditForm(forms.Form):
@@ -45,9 +46,9 @@ class EditForm(forms.Form):
                                             label = 'Приймав замовлення',
                                             initial= '')
     
-    # open_orded = forms.DateTimeField(label = 'Відкриття замовлення', 
-    #                                  initial = datetime.datetime.now(),
-    #                                  input_formats = ['%Y-%m-%d %H:%M'])
+    # open_order = forms.DateTimeField(label = 'Відкриття замовлення', 
+    #                                  input_formats = ['%Y-%m-%d %H:%M'],
+    #                                  disabled=True)
     
     done_order = forms.DateTimeField(label = 'Закриття замовлення',
                                      input_formats=['%Y-%m-%d %H:%M'])
@@ -96,3 +97,4 @@ class EditForm(forms.Form):
             raise forms.ValidationError(_('Номер телефону повинен містити "+380" та 9 цифр'))          
         
         return phone
+    

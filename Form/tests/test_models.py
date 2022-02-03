@@ -1,12 +1,10 @@
 from django.test import TestCase
-
 from Form.models import Form
 
 class FormModelTest(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-        #Set up non-modified objects used by all test methods
         Form.objects.create(first_name='Big',
                             last_name='Bob')
 
